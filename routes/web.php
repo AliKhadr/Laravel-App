@@ -11,15 +11,13 @@ Route::get('/', function () {
 
 Route::get('/jobs', function(){
     return view('jobs', [
-        'jobs' => Job::all() 
+        'jobs' => Job::all()
     ]);
 });
 
 Route::get('/jobs/{id}', function($id){
-    $job = Job::find($id);
-
     return view('job', [
-        'job' => $job
+        'job' => Job::find($id)
     ]);
 });
 
