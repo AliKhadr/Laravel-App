@@ -10,10 +10,13 @@
             </div>
             <div>
                 @foreach ($item->tags as $tag)
-                    <span>{{$tag->name}}</span>
+                <span>{{$tag->name}}</span>
                 @endforeach
             </div>
         </a>
         @endforeach
+        <div>
+            {{$jobs->links()}}
+        </div>
     </div>
 </x-layout>
