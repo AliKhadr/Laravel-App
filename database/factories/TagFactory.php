@@ -9,6 +9,7 @@ use Illuminate\Database\Eloquent\Factories\Factory;
  */
 class TagFactory extends Factory
 {
+    protected $jobSkills = ['Programming', 'Cooking', 'Writing', 'Design', 'Marketing', 'Project Management', 'Data Analysis'];
     /**
      * Define the model's default state.
      *
@@ -17,7 +18,7 @@ class TagFactory extends Factory
     public function definition(): array
     {
         return [
-            //
+            'name' => fake()->randomElement($this->jobSkills)
         ];
     }
 }
