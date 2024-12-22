@@ -22,7 +22,7 @@ class DatabaseSeeder extends Seeder
         //     'email' => 'test@example.com',
         // ]);
         
-        job_tag::factory(20)->create();
+        job_tag::factory(28)->create();
         // $this->call(JobSeeder::class);
     }
 }
