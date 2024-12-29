@@ -21,12 +21,18 @@ Route::get('/jobs', function(){
 });
 
 Route::get('/jobs/{id}', function($id){
+    $job = Job::find($id);
     return view('jobs.show', [
-        'job' => Job::find($id)
+        'job' => $job
     ]);
 });
 
 Route::post('/jobs', function(){
+    request()->validate([
+        'Job_Title' => ['required', 'min:3'],
+        'Job_Salary' => ['required']
+    ]);
+
     Job::create([
         'Job_Title' => request('Job_Title'),
         'Job_Salary' => request('Job_Salary'),
