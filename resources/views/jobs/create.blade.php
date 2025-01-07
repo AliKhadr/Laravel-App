@@ -17,7 +17,7 @@
                                 <input type="text" name="Job_Title" id="Job_Title" class="block min-w-0 grow py-1.5 pl-1 pr-3 text-base text-gray-900 placeholder:text-gray-400 focus:outline focus:outline-0 sm:text-sm/6" placeholder="Software Engineer" required value="{{ old('Job_Title') }}">
                             </div>
                             @error('Job_Title')
-                                <p class="text-red-500 italic mt-5">{{$message}}</p>
+                            <p class="text-red-500 italic mt-5">{{$message}}</p>
                             @enderror
                         </div>
                     </div>
@@ -29,7 +29,7 @@
                                 <input type="text" name="Job_Salary" id="Job_Salary" class="block min-w-0 grow py-1.5 pl-1 pr-3 text-base text-gray-900 placeholder:text-gray-400 focus:outline focus:outline-0 sm:text-sm/6" placeholder="$100,000 Per Year" required value="{{ old('Job_Salary') }}">
                             </div>
                             @error('Job_Salary')
-                                <p class="text-red-500 italic mt-5">{{$message}}</p>
+                            <p class="text-red-500 italic mt-5">{{$message}}</p>
                             @enderror
                         </div>
                     </div>
@@ -48,7 +48,7 @@
         </div>
 
         <div class="mt-6 flex items-center justify-end gap-x-6">
-        <a href="/jobs" class="rounded-md bg-red-500 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-red-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-600" onclick="window.location='/jobs'">Cancel</a>
+            <a href="/jobs" class="rounded-md bg-red-500 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-red-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-600" onclick="window.location='/jobs'">Cancel</a>
             <button type="submit" class="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Save</button>
         </div>
     </form>
