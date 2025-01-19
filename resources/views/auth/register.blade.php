@@ -34,7 +34,7 @@
                     <x-form-field>
                         <x-form-label for="password">Password</x-form-label>
                         <div class="mt-2">
-                            <x-form-input type="password" name="password" id="password" placeholder="joe123" required value="{{ old('password') }}" />
+                            <x-form-input type="password" name="password" id="password" placeholder="joe123" required/>
                             <x-form-error name="password" />
                         </div>
                     </x-form-field>
@@ -42,7 +42,7 @@
                     <x-form-field>
                         <x-form-label for="password_confirmation">Confirm Password</x-form-label>
                         <div class="mt-2">
-                            <x-form-input type="password" name="password_confirmation" id="password_confirmation" placeholder="joe123" required value="{{ old('password_confirmation') }}" />
+                            <x-form-input type="password" name="password_confirmation" id="password_confirmation" placeholder="joe123" required />
                             <x-form-error name="password_confirmation" />
                         </div>
                     </x-form-field>
