@@ -3,9 +3,16 @@
 use App\Http\Controllers\JobController;
 use App\Http\Controllers\RegisteredUserController;
 use App\Http\Controllers\SessionController;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
-Route::view('/', 'home', ['greeting' => 'Hello User']);
+// Route::view('/', 'home', ['greeting' => 'Hello User']);
+Route::get('/', function () {
+    $greeting = Auth::check() ? 'Hello ' . Auth::user()->first_name : 'Hello User';
+    return view('home', ['greeting' => $greeting]);
+});
+
+
 Route::view('/contact', 'contact');
 
 Route::resource('jobs', JobController::class);

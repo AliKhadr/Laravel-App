@@ -19,7 +19,7 @@
                     <x-form-field>
                         <x-form-label for="password">Password</x-form-label>
                         <div class="mt-2">
-                            <x-form-input type="password" name="password" id="password" placeholder="joe123" required value="{{ old('password') }}" />
+                            <x-form-input type="password" name="password" id="password" placeholder="joe123" required />
                             <x-form-error name="password" />
                         </div>
                     </x-form-field>
