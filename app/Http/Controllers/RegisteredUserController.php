@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Employer;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -24,6 +25,12 @@ class RegisteredUserController extends Controller
         
         //Create User
         $user = User::create($validatedAttributes);
+
+        // //For Testing
+        // Employer::create([
+        //     'name' => fake()->company(),
+        //     'user_id' => $user->id
+        // ]);
 
         //Login
         Auth::login($user);
